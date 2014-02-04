@@ -8,7 +8,6 @@ module.exports = function(config){
 
     // list of files / patterns to load in the browser
     files : [
-      {pattern: 'test/lib/jquery-*.js', watched: true, included: true, served: true},
       {pattern: 'test/lib/angular.js', watched: true, included: true, served: true},
       {pattern: 'test/lib/angular-*.js', watched: true, included: true, served: true},
       {pattern: 'test/lib/**/*.js', watched: true, included: true, served: true},
