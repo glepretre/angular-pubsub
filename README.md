@@ -67,7 +67,7 @@ Tests are based on Karma-runner and implemented with Jasmine.
 * Karma-runner: http://karma-runner.github.io/
 * Jasmine: http://pivotal.github.io/jasmine/
 
-angular-pubsub is (for now) tested on Chrome and Firefox only.
+angular-pubsub is tested on Chrome, Firefox and PhantomJS.
 
 #Contribute
 
