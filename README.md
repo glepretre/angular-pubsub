@@ -11,8 +11,7 @@ angular-pubsub
 
 ##Copy the latest version
 
-Here it is :
-https://github.com/glepretre/angular-pubsub/blob/master/src/angular-pubsub.js
+[Here it is!](https://github.com/glepretre/angular-pubsub/blob/master/src/angular-pubsub.js)
 
 ##Include it into your app
 
@@ -59,8 +58,8 @@ it is recommanded to unsubscribe
 
 Tests are based on Karma-runner and implemented with Jasmine 2.
 
-* Karma-runner: https://karma-runner.github.io/
-* Jasmine: https://jasmine.github.io/
+* [Karma-runner](https://karma-runner.github.io/)
+* [Jasmine](https://jasmine.github.io/)
 
 angular-pubsub is tested on Chrome, Firefox and PhantomJS.
 
