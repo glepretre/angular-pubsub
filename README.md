@@ -30,7 +30,6 @@ Then where you need it :
 #Using angular-pubsub
 
 angular-pubsub provides 3 methods :
-angular-pubsub provides 3 methods :
 * subscribe()
 * publish()
 * unsubscribe()
