@@ -3,13 +3,9 @@ angular-pubsub
 
 **Simple pubsub service for angularJS**
 
-Forked from: https://gist.github.com/floatingmonkey/3384419#file-gistfile1-js
-
 ###Dependencies
 
 **None.** angular-pubsub only requires angular!
-
-Rewritten and added tests.
 
 #Installing angular-pubsub
 
