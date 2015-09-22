@@ -25,7 +25,7 @@ describe('angularPubsub', function() {
 
         registeredCallbacks.forEach(function(callback) {
           expect(callback).toHaveBeenCalled();
-          expect(callback.callCount).toEqual(1);
+          expect(callback.calls.count()).toEqual(1);
         });
       });
 
@@ -39,7 +39,7 @@ describe('angularPubsub', function() {
 
         registeredCallbacks.forEach(function(callback) {
           expect(callback).toHaveBeenCalled();
-          expect(callback.callCount).toEqual(n);
+          expect(callback.calls.count()).toEqual(n);
         });
       });
 
@@ -83,11 +83,11 @@ describe('angularPubsub', function() {
     });
 
     it('should throw an exception when callback is not a function', function(){
-      var error = 'callback must be a function';
+      var errorMessage = 'callback must be a function';
 
       expect(function() {
         angularPubsub.subscribe(topic, {});
-      }).toThrow(error);
+      }).toThrowError(errorMessage);
     });
 
     it('should only call callback once registered', function() {
@@ -97,7 +97,7 @@ describe('angularPubsub', function() {
       angularPubsub.publish(topic);
 
       expect(callback).toHaveBeenCalled();
-      expect(callback.callCount).toEqual(1);
+      expect(callback.calls.count()).toEqual(1);
     });
 
     it('should register callback n times', function() {
@@ -110,7 +110,7 @@ describe('angularPubsub', function() {
 
       angularPubsub.publish(topic);
 
-      expect(callback.callCount).toEqual(n);
+      expect(callback.calls.count()).toEqual(n);
     });
   });
 
@@ -135,7 +135,7 @@ describe('angularPubsub', function() {
 
       registeredCallbacks.forEach(function(callback) {
         expect(callback).toHaveBeenCalled();
-        expect(callback.callCount).toEqual(1);
+        expect(callback.calls.count()).toEqual(1);
       });
     });
 

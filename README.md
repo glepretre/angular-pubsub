@@ -57,10 +57,10 @@ it is recommanded to unsubscribe
 
 #Tests
 
-Tests are based on Karma-runner and implemented with Jasmine.
+Tests are based on Karma-runner and implemented with Jasmine 2.
 
 * Karma-runner: http://karma-runner.github.io/
-* Jasmine: http://pivotal.github.io/jasmine/
+* Jasmine: http://jasmine.github.io/
 
 angular-pubsub is tested on Chrome, Firefox and PhantomJS.
 
