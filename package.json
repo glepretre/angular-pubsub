@@ -24,7 +24,7 @@
   "homepage": "https://github.com/glepretre/angular-pubsub",
   "private": true,
   "scripts": {
-    "unit": "scripts/unit-tests.sh"
+    "test": "scripts/unit-tests.sh"
   },
   "dependencies": {},
   "devDependencies": {
