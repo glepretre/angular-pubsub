@@ -18,7 +18,7 @@
   'use strict';
   var angularPubsub = angular.module('angularPubsub', []);
 
-  return angularPubsub.factory('angularPubsub', function() {
+  return angularPubsub.factory('PubSub', function() {
     var channels = {};
     return {
       publish: function(topic) {

@@ -4,12 +4,12 @@ define([
   'use strict';
 
   describe('angularPubsub', function() {
-    var angularPubsub;
+    var PubSub;
 
     beforeEach(module('angularPubsub'));
 
     beforeEach(inject(function($injector) {
-      angularPubsub = $injector.get('angularPubsub');
+      PubSub = $injector.get('PubSub');
     }));
 
     describe('publish', function() {
@@ -19,12 +19,12 @@ define([
       beforeEach(function() {
         registeredCallbacks = [jasmine.createSpy(), jasmine.createSpy()];
         registeredCallbacks.forEach(function(callback) {
-          angularPubsub.subscribe(topic, callback);
+          PubSub.subscribe(topic, callback);
         });
       });
 
       it('should call registered callbacks once', function() {
-        angularPubsub.publish(topic);
+        PubSub.publish(topic);
 
         registeredCallbacks.forEach(function(callback) {
           expect(callback).toHaveBeenCalled();
@@ -37,7 +37,7 @@ define([
             i;
 
         for (i = 0; i < n; i++) {
-          angularPubsub.publish(topic);
+          PubSub.publish(topic);
         }
 
         registeredCallbacks.forEach(function(callback) {
@@ -48,7 +48,7 @@ define([
 
       describe('with parameters', function() {
         it('should pass parameters to registered callbacks', function() {
-          angularPubsub.publish(topic, 1, 2, 3, 4);
+          PubSub.publish(topic, 1, 2, 3, 4);
 
           registeredCallbacks.forEach(function(callback) {
             expect(callback).toHaveBeenCalledWith(1, 2, 3, 4);
@@ -61,12 +61,12 @@ define([
 
         it('should not throw', function() {
           expect(function() {
-            angularPubsub.publish(unknownTopic);
+            PubSub.publish(unknownTopic);
           }).not.toThrow();
         });
 
         it('should not call other topics callbacks', function() {
-          angularPubsub.publish(unknownTopic);
+          PubSub.publish(unknownTopic);
 
           registeredCallbacks.forEach(function(callback) {
             expect(callback).not.toHaveBeenCalled();
@@ -89,15 +89,15 @@ define([
         var ERROR_MESSAGE = 'callback must be a function';
 
         expect(function() {
-          angularPubsub.subscribe(topic, {});
+          PubSub.subscribe(topic, {});
         }).toThrowError(ERROR_MESSAGE);
       });
 
       it('should only call callback once registered', function() {
-        angularPubsub.publish(topic);
-        angularPubsub.subscribe(topic, callback);
+        PubSub.publish(topic);
+        PubSub.subscribe(topic, callback);
 
-        angularPubsub.publish(topic);
+        PubSub.publish(topic);
 
         expect(callback).toHaveBeenCalled();
         expect(callback.calls.count()).toEqual(1);
@@ -108,10 +108,10 @@ define([
             i;
 
         for (i = 0; i < n; i++) {
-          angularPubsub.subscribe(topic, callback);
+          PubSub.subscribe(topic, callback);
         }
 
-        angularPubsub.publish(topic);
+        PubSub.publish(topic);
 
         expect(callback.calls.count()).toEqual(n);
       });
@@ -124,18 +124,18 @@ define([
       beforeEach(function() {
         registeredCallbacks = [jasmine.createSpy(), jasmine.createSpy()];
         registeredCallbacks.forEach(function(callback) {
-          angularPubsub.subscribe(topic, callback);
+          PubSub.subscribe(topic, callback);
         });
       });
 
       it('should not allow publish to registered callbacks ' +
          'after execution', function() {
-        angularPubsub.publish(topic);
+        PubSub.publish(topic);
 
         registeredCallbacks.forEach(function(callback) {
-          angularPubsub.unsubscribe(topic, callback);
+          PubSub.unsubscribe(topic, callback);
         });
-        angularPubsub.publish(topic);
+        PubSub.publish(topic);
 
         registeredCallbacks.forEach(function(callback) {
           expect(callback).toHaveBeenCalled();
@@ -147,8 +147,8 @@ define([
         var remainingCallback = registeredCallbacks[0],
             callbackToUnregister = registeredCallbacks[1];
 
-        angularPubsub.unsubscribe(topic, callbackToUnregister);
-        angularPubsub.publish(topic);
+        PubSub.unsubscribe(topic, callbackToUnregister);
+        PubSub.publish(topic);
 
         expect(remainingCallback).toHaveBeenCalled();
         expect(callbackToUnregister).not.toHaveBeenCalled();
@@ -158,7 +158,7 @@ define([
         var unregisteredCallback = jasmine.createSpy();
 
         expect(function() {
-          angularPubsub.unsubscribe(topic, unregisteredCallback);
+          PubSub.unsubscribe(topic, unregisteredCallback);
         }).not.toThrow();
       });
 
@@ -167,7 +167,7 @@ define([
 
         registeredCallbacks.forEach(function(callback) {
           expect(function() {
-            angularPubsub.unsubscribe(unknownTopic, callback);
+            PubSub.unsubscribe(unknownTopic, callback);
           }).not.toThrow();
         });
       });
