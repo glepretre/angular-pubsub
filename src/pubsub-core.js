@@ -1,3 +1,9 @@
+/*
+ * UMD (Universal Module Definition) pattern
+ * https://github.com/umdjs/umd
+ * returnExports snippet
+ * https://github.com/umdjs/umd/blob/master/returnExports.js
+ */
 (function(root, factory) {
   'use strict';
   if (typeof define === 'function' && define.amd) {
