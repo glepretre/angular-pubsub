@@ -27,7 +27,6 @@ define([
         PubSub.publish(topic);
 
         registeredCallbacks.forEach(function(callback) {
-          expect(callback).toHaveBeenCalled();
           expect(callback.calls.count()).toEqual(1);
         });
       });
@@ -41,7 +40,6 @@ define([
         }
 
         registeredCallbacks.forEach(function(callback) {
-          expect(callback).toHaveBeenCalled();
           expect(callback.calls.count()).toEqual(n);
         });
       });
@@ -99,7 +97,6 @@ define([
 
         PubSub.publish(topic);
 
-        expect(callback).toHaveBeenCalled();
         expect(callback.calls.count()).toEqual(1);
       });
 
@@ -138,7 +135,6 @@ define([
         PubSub.publish(topic);
 
         registeredCallbacks.forEach(function(callback) {
-          expect(callback).toHaveBeenCalled();
           expect(callback.calls.count()).toEqual(1);
         });
       });
