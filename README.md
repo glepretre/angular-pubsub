@@ -50,7 +50,7 @@ angular-pubsub provides 3 methods :
 * publish()
 * unsubscribe()
 
-## subscribing to a topic
+## Subscribing to a topic
 
 The client (controller in most cases) which need to receive messages have to
 subscribe to a specific topic:
@@ -63,7 +63,7 @@ PubSub.subscribe(topic, callback);
 - 'topic' must be a string describing a topic/event (BUS name)
 - 'callback' must be a function, the callback executed when receiving a message
 
-## publishing into a topic
+## Publishing into a topic
 
 ```javascript
 PubSub.publish(topic, other, parameters);
@@ -71,7 +71,7 @@ PubSub.publish(topic, other, parameters);
 
 - 'other', 'parameters' : publish accept parameters
 
-## unsubscribing from a topic
+## Unsubscribing from a topic
 
 When the client don't need to receive messages anymore, and to avoid memory leaks,
 it is recommanded to unsubscribe
