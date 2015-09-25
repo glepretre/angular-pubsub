@@ -52,7 +52,7 @@ angular-pubsub provides 3 methods :
 
 ## Subscribing to a topic
 
-The client (controller in most cases) which need to receive messages have to
+The client (controller in most cases) which needs to receive messages has to
 subscribe to a specific topic:
 
 ```javascript
@@ -73,8 +73,8 @@ PubSub.publish(topic, other, parameters);
 
 ## Unsubscribing from a topic
 
-When the client don't need to receive messages anymore, and to avoid memory leaks,
-it is recommanded to unsubscribe
+When the client does not need to receive messages anymore,
+and to avoid memory leaks, it is recommended to unsubscribe.
 
 ```javascript
 PubSub.unsubscribe(topic, callbackToUnregister);
