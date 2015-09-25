@@ -5,7 +5,7 @@ angular-pubsub
 
 ### Dependencies
 
-* angular 1.3+
+* angular 1.3.x
 
 # Installing angular-pubsub
 
