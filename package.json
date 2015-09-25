@@ -1,0 +1,53 @@
+{
+  "name": "angular-pubsub",
+  "version": "1.0.0",
+  "description": "Simple pubsub service for angularJS",
+  "author": "Gilles Lepretre <gilles.lepretre@lim.eu>",
+  "contributors": [
+    "Gilles Lepretre <gilles.lepretre@lim.eu>",
+    "Julien Sanchez <julien.sanchez@lim.eu>",
+    "Hervé Gaucher <herve.gaucher@lim.eu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:glepretre/angular-pubsub.git"
+  },
+  "main": "dist/angular-pubsub.js",
+  "files": [
+    "dist",
+    "src/angular-pubsub.js"
+  ],
+  "engines": {
+    "node": ">=0.10.21"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/glepretre/angular-pubsub",
+  "private": true,
+  "scripts": {
+    "test": "scripts/unit-tests.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "0.13.10",
+    "karma-chrome-launcher": "0.2.0",
+    "karma-firefox-launcher": "0.1.6",
+    "karma-jasmine": "0.3.6",
+    "karma-phantomjs-launcher": "0.2.1",
+    "karma-requirejs": "0.2.2",
+    "phantomjs": "1.9.18",
+    "requirejs": "2.1.20"
+  },
+  "bugs": {
+    "url" : "https://github.com/glepretre/angular-pubsub/issues"
+  },
+  "keywords": [
+    "angular",
+    "angularJS",
+    "pubsub",
+    "publish",
+    "subscribe",
+    "events",
+    "broadcast",
+    "communication"
+  ]
+}

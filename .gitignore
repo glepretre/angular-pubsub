@@ -1,2 +1,2 @@
-scripts/**/*
-
+bower_components
+node_modules
