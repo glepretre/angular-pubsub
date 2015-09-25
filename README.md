@@ -46,9 +46,9 @@ angular.module('myApp').controller('myAppCtrl',['PubSub', function (Pubsub) {
 # Using angular-pubsub
 
 angular-pubsub provides 3 methods :
-* subscribe()
-* publish()
-* unsubscribe()
+* `subscribe()`
+* `publish()`
+* `unsubscribe()`
 
 ## Subscribing to a topic
 
