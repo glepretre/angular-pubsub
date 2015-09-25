@@ -59,17 +59,17 @@ subscribe to a specific topic:
 PubSub.subscribe(topic, callback);
 ```
 
-
-- 'topic' must be a string describing a topic/event (BUS name)
-- 'callback' must be a function, the callback executed when receiving a message
+- `topic` - `{string}` - Name of the topic/event (BUS name)
+- `callback` - `{function}` - Function to call when receiving a message
 
 ## Publishing into a topic
 
 ```javascript
-PubSub.publish(topic, other, parameters);
+PubSub.publish(topic, args);
 ```
 
-- 'other', 'parameters' : publish accept parameters
+- `args` - `{*}` - Optional one or more arguments
+  which will be passed onto the subscribed clients
 
 ## Unsubscribing from a topic
 
@@ -79,7 +79,7 @@ and to avoid memory leaks, it is recommended to unsubscribe.
 ```javascript
 PubSub.unsubscribe(topic, callbackToUnregister);
 ```
-- 'callbackToUnregister' must be strictly equal to the registered callback.
+- `callbackToUnregister` - `{function}` - Registered `callback`
 
 # Tests
 
