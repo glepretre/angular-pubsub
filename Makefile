@@ -14,10 +14,10 @@ $(OUTDIR):
 	mkdir --parents $(OUTDIR)
 
 clean:
-	rm --force --recursive ./$(OUTDIR)/*
+	rm --recursive --force ./$(OUTDIR)/*
 
 bower-install: bower.json
-	rm -rf $(BOWER_COMPONENTS_DIR)
+	rm --recursive --force $(BOWER_COMPONENTS_DIR)
 	bower install
 
 .PHONY: bower-install build clean
