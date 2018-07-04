@@ -1,6 +1,6 @@
 {
   "name": "angular-pubsub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple pubsub service for angularJS",
   "author": "Gilles Lepretre <gilles.lepretre@lim.eu>",
   "contributors": [
@@ -18,7 +18,7 @@
     "src/angular-pubsub.js"
   ],
   "engines": {
-    "node": ">=0.10.21"
+    "node": ">=6.11.3"
   },
   "license": "MIT",
   "homepage": "https://github.com/glepretre/angular-pubsub",
@@ -28,14 +28,15 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "karma": "0.13.10",
-    "karma-chrome-launcher": "0.2.0",
-    "karma-firefox-launcher": "0.1.6",
-    "karma-jasmine": "0.3.6",
-    "karma-phantomjs-launcher": "0.2.1",
-    "karma-requirejs": "0.2.2",
-    "phantomjs": "1.9.18",
-    "requirejs": "2.1.20"
+    "jasmine-core": "2.x",
+    "karma": "2.x",
+    "karma-chrome-launcher": "2.x",
+    "karma-firefox-launcher": "1.x",
+    "karma-jasmine": "1.x",
+    "karma-phantomjs-launcher": "1.x",
+    "karma-requirejs": "1.x",
+    "phantomjs": "2.x",
+    "requirejs": "2.x"
   },
   "bugs": {
     "url" : "https://github.com/glepretre/angular-pubsub/issues"
