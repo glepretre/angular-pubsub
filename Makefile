@@ -22,4 +22,7 @@ $(BOWER_COMPONENTS_DIR): bower.json
 	rm -rf $(BOWER_COMPONENTS_DIR)
 	bower install
 
-.PHONY: bower-install build clean
+test: bower-install
+	env NOWINDOW=1 scripts/unit-tests.sh
+
+.PHONY: bower-install build clean test

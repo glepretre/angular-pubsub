@@ -1,8 +1,19 @@
 /* jshint node: true */
 
-'use strict';
-
 module.exports = function(config) {
+  'use strict';
+
+  var chromeBrowser = 'Chrome',
+      firefoxBrowser = 'Firefox';
+
+  var headless = !!process.env.NOWINDOW;
+  var HEADLESS_SUFFIX = 'Headless';
+
+  if (headless) {
+    chromeBrowser += HEADLESS_SUFFIX;
+    firefoxBrowser += HEADLESS_SUFFIX;
+  }
+
   config.set({
     basePath: '..',
     frameworks: ['jasmine', 'requirejs'],
@@ -30,8 +41,8 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: [
-      'Chrome',
-      'Firefox'
+      chromeBrowser,
+      firefoxBrowser
     ],
 
     // If browser does not capture in given timeout [ms], kill it
@@ -41,6 +52,6 @@ module.exports = function(config) {
      * Continuous Integration mode
      * if true, it capture browsers, run tests and exit
      */
-    singleRun: false
+    singleRun: !!headless
   });
 };

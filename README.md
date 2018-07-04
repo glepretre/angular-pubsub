@@ -105,7 +105,7 @@ then
 
 or
 
-    npm test
+    make test
 
 ## Building
 
