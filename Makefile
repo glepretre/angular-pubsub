@@ -7,7 +7,7 @@ BOWER_COMPONENTS_DIR := bower_components/
 
 build: $(JS_BUILD)
 
-$(JS_BUILD): $(JS_FILES) $(CONFIG_FILE)
+$(JS_BUILD): $(JS_FILES) $(CONFIG_FILE) bower-install
 	r.js -o $(CONFIG_FILE)
 
 $(OUTDIR):
