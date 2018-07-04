@@ -6,6 +6,7 @@
  */
 (function(root, factory) {
   'use strict';
+
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define(['angular', 'pubsub-core'], factory);
@@ -17,6 +18,7 @@
   }
 }(this, function(angular, pubsubCore) {
   'use strict';
+
   var angularPubsub = angular.module('angularPubsub', []);
 
   return angularPubsub.factory('PubSub', pubsubCore);

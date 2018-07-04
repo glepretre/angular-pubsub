@@ -22,7 +22,7 @@ module.exports = function(config) {
       { pattern: 'src/test-main.js' },
       { pattern: 'config/require.conf.js', included: false },
       { pattern: 'bower_components/**/*.js', included: false },
-      { pattern: 'src/**/*.js', included: false },
+      { pattern: 'src/**/*.js', included: false }
     ],
     exclude: [],
     reporters: ['progress'],

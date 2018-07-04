@@ -6,6 +6,7 @@
  */
 (function(root, factory) {
   'use strict';
+
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define('pubsub-core',[], factory);
@@ -22,6 +23,7 @@
   }
 }(this, function() {
   'use strict';
+
   return function() {
     var channels = {};
     return {
@@ -37,7 +39,7 @@
       },
 
       subscribe: function(topic, callback) {
-        if (!(callback instanceof Function)){
+        if (!(callback instanceof Function)) {
           throw new Error('callback must be a function');
         }
         if (!channels[topic]) {
@@ -69,6 +71,7 @@
  */
 (function(root, factory) {
   'use strict';
+
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define('angular-pubsub',['angular', 'pubsub-core'], factory);
@@ -80,6 +83,7 @@
   }
 }(this, function(angular, pubsubCore) {
   'use strict';
+
   var angularPubsub = angular.module('angularPubsub', []);
 
   return angularPubsub.factory('PubSub', pubsubCore);

@@ -6,6 +6,7 @@
  */
 (function(root, factory) {
   'use strict';
+
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);
@@ -22,6 +23,7 @@
   }
 }(this, function() {
   'use strict';
+
   return function() {
     var channels = {};
     return {
@@ -37,7 +39,7 @@
       },
 
       subscribe: function(topic, callback) {
-        if (!(callback instanceof Function)){
+        if (!(callback instanceof Function)) {
           throw new Error('callback must be a function');
         }
         if (!channels[topic]) {

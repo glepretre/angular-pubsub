@@ -1,3 +1,6 @@
+// JSHint warns about the official RequireJS config syntax
+/* jshint -W030, -W033 */
+
 ({
   mainConfigFile: './require.conf.js',
   name:'angular-pubsub',
@@ -7,5 +10,5 @@
   paths: {
     'angular': 'empty:'
   },
-  exclude: [],
+  exclude: []
 })

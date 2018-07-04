@@ -1,6 +1,6 @@
 {
   "name": "angular-pubsub",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple pubsub service for angularJS",
   "authors": [
     "Gilles Lepretre <gilles.lepretre@lim.eu>",
