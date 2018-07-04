@@ -1,6 +1,6 @@
 {
   "name": "angular-pubsub",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple pubsub service for angularJS",
   "author": "Gilles Lepretre <gilles.lepretre@lim.eu>",
   "contributors": [
@@ -33,9 +33,7 @@
     "karma-chrome-launcher": "2.x",
     "karma-firefox-launcher": "1.x",
     "karma-jasmine": "1.x",
-    "karma-phantomjs-launcher": "1.x",
     "karma-requirejs": "1.x",
-    "phantomjs": "2.x",
     "requirejs": "2.x"
   },
   "bugs": {
