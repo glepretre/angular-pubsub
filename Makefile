@@ -16,8 +16,10 @@ $(OUTDIR):
 clean:
 	rm --recursive --force ./$(OUTDIR)/*
 
-bower-install: bower.json
-	rm --recursive --force $(BOWER_COMPONENTS_DIR)
+bower-install: $(BOWER_COMPONENTS_DIR)
+
+$(BOWER_COMPONENTS_DIR): bower.json
+	rm -rf $(BOWER_COMPONENTS_DIR)
 	bower install
 
 .PHONY: bower-install build clean
