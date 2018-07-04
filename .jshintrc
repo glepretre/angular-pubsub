@@ -1,9 +1,8 @@
 {
   "bitwise": true,
   "browser": true,
-  "camelcase": true,
-  "curly": true,
   "eqeqeq": true,
+  "esversion": 6,
   "forin": true,
   "globals": {
     "beforeEach": false,
@@ -16,8 +15,6 @@
     "module": false,
     "require": false
   },
-  "immed": true,
-  "quotmark": true,
   "strict": true,
   "undef": true,
   "unused": true

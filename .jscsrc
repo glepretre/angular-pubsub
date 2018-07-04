@@ -1,34 +1,61 @@
 {
-    "disallowImplicitTypeConversion": ["string"],
-    "disallowKeywords": ["with"],
-    "disallowMixedSpacesAndTabs": true,
-    "disallowMultipleLineBreaks": true,
-    "disallowSpaceAfterPrefixUnaryOperators": ["!"],
-    "disallowSpaceBeforeBinaryOperators": [","],
-    "disallowSpacesInFunctionExpression": {
-        "beforeOpeningRoundBrace": true
-    },
-    "disallowTrailingWhitespace": true,
-    "esnext": true,
-    "excludeFiles": [],
-    "jsDoc": {
-        "checkParamNames": true,
-        "requireParamTypes": true
-    },
-    "maximumLineLength": {
-        "allowUrlComments": true,
-        "value": 80
-    },
-    "requireBlocksOnNewline": true,
-    "requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch"],
-    "requireKeywordsOnNewLine": ["else"],
-    "requireLineFeedAtFileEnd": true,
-    "requireSpaceAfterBinaryOperators": [",", "?", "+", "-", "/", "*", ":", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-    "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try", "catch"],
-    "requireSpaceBeforeBinaryOperators": ["?", "+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
-    "requireSpacesInConditionalExpression": true,
-    "requireSpacesInFunctionExpression": {
-        "beforeOpeningCurlyBrace": true
-    },
-    "validateQuoteMarks": "'"
+  "disallowEmptyBlocks": true,
+  "disallowImplicitTypeConversion": ["string"],
+  "disallowKeywords": ["with"],
+  "disallowMixedSpacesAndTabs": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowMultipleLineStrings": true,
+  "disallowMultipleSpaces": {
+    "allowEOLComments": true
+  },
+  "disallowOperatorBeforeLineBreak": ["."],
+  "disallowSpaceAfterPrefixUnaryOperators": ["!", "-"],
+  "disallowSpaceBeforeBinaryOperators": [","],
+  "disallowSpacesInCallExpression": true,
+  "disallowSpacesInFunction": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideArrayBrackets": true,
+  "disallowTrailingComma": true,
+  "disallowTrailingWhitespace": true,
+  "excludeFiles": [],
+  "jsDoc": {
+    "checkParamNames": true,
+    "requireParamTypes": true
+  },
+  "maximumLineLength": {
+    "allowUrlComments": true,
+    "value": 80
+  },
+  "requireBlocksOnNewline": true,
+  "requireCamelCaseOrUpperCaseIdentifiers": {
+    "ignoreProperties": true
+  },
+  "requireCapitalizedConstructors": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch"],
+  "requireDotNotation": {
+    "allExcept": ["keywords"]
+  },
+  "requireKeywordsOnNewLine": ["else"],
+  "requireLineBreakAfterVariableAssignment": true,
+  "requireLineFeedAtFileEnd": true,
+  "requireOperatorBeforeLineBreak": ["?", "=", "+", "-", "/", "*", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
+  "requirePaddingNewLinesAfterUseStrict": true,
+  "requireParenthesesAroundIIFE": true,
+  "requireSpaceAfterBinaryOperators": [",", "?", "+", "-", "/", "*", ":", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
+  "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try", "catch"],
+  "requireSpaceAfterLineComment": true,
+  "requireSpaceBeforeBinaryOperators": ["?", "+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpacesInConditionalExpression": true,
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "validateIndentation": 2,
+  "validateLineBreaks": {
+    "character": "LF",
+    "reportOncePerFile": true
+  },
+  "validateQuoteMarks": "'"
 }
